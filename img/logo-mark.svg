@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230" width="200" height="230" role="img" aria-label="Castellum Shop">
+  <g fill="none" stroke="#B58C35" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M46 172v-64a54 54 0 0 1 108 0v64a26 26 0 0 1-26 26H72a26 26 0 0 1-26-26z"/>
+  </g>
+  <path d="M100 14l5.4 14.6L120 34l-14.6 5.4L100 54l-5.4-14.6L80 34l14.6-5.4z" fill="#B58C35"/>
+  <text x="100" y="151" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="74" letter-spacing="-1" fill="#B58C35">CS</text>
+</svg>

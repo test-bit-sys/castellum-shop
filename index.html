@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1512" />
+  <title>Castellum Shop — عطور ومستحضرات تجميل أصلية</title>
+  <meta name="description" content="عطور، زيوت، وعناية فاخرة أصلية. توصيل لكل الولايات والدفع عند الاستلام." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- announcement -->
+  <div class="announce" id="announce">
+    <div class="announce__track">
+      <span>🚚 توصيل لكل الولايات — الدفع عند الاستلام</span>
+      <span>✦</span>
+      <span>🔒 دفع آمن عبر بريدي موب / CCP</span>
+      <span>✦</span>
+      <span>🎁 تغليف هدايا مجاني</span>
+      <span>✦</span>
+    </div>
+  </div>
+
+  <!-- header -->
+  <header class="header" id="header">
+    <div class="wrap header__inner">
+      <a href="index.html" class="brand" aria-label="Castellum Shop">
+        <img class="brand__mark" src="img/logo-mark.svg" alt="" width="42" height="48" />
+        <span class="brand__text">
+          <strong>CASTELLUM</strong>
+          <small>SHOP · COSMETICS</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <a href="#products" data-i18n="nav.products">منتجاتنا</a>
+        <a href="#why" data-i18n="nav.why">لماذا نحن</a>
+        <a href="#reviews" data-i18n="nav.reviews">آراء الزبائن</a>
+        <a href="#faq" data-i18n="nav.faq">الأسئلة</a>
+        <div class="lang lang--nav" data-lang-switch>
+          <button type="button" data-lang="ar">AR</button>
+          <button type="button" data-lang="fr">FR</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" data-lang-switch>
+          <button type="button" data-lang="ar">AR</button>
+          <button type="button" data-lang="fr">FR</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a href="#order" class="btn btn--dark btn--sm" data-i18n="header.order">اطلب الآن</a>
+        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- hero -->
+    <section class="hero" id="home">
+      <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
+      <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow" data-reveal>
+            <span class="dot"></span>
+            <span id="heroEyebrow">توصيل لكل الولايات · دفع عند الاستلام</span>
+          </span>
+          <h1 class="hero__title" data-reveal data-delay="1" id="heroTitle">روائح تبقى، وإحساس فاخر</h1>
+          <p class="hero__sub" data-reveal data-delay="2" id="heroSubtitle">عطور، زيوت، وعناية فاخرة مختارة بعناية.</p>
+
+          <div class="hero__rating" data-reveal data-delay="3">
+            <div class="stars" aria-label="5/5">★★★★★</div>
+            <span><strong>4.9</strong> / 5 — <span data-i18n="hero.rating">أكثر من 1,200 زبون راضٍ</span></span>
+          </div>
+
+          <div class="hero__cta" data-reveal data-delay="4">
+            <a href="#order" class="btn btn--primary btn--lg glow">
+              <span data-i18n="hero.cta">اشتري الآن</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#products" class="btn btn--ghost btn--lg" data-i18n="hero.browse">شوف المنتجات</a>
+          </div>
+
+          <ul class="hero__chips" data-reveal data-delay="5">
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="hero.chip1">دفع عند الاستلام</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="hero.chip2">توصيل 69 ولاية</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="hero.chip3">منتجات أصلية</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__media" data-reveal data-delay="2">
+          <div class="hero__frame">
+            <img id="heroImage" src="img/demo-perfume.svg" alt="Castellum Shop" loading="eager" />
+            <div class="hero__shine" aria-hidden="true"></div>
+          </div>
+
+          <div class="float-card float-card--price">
+            <span class="float-card__label" data-i18n="hero.priceLabel">السعر</span>
+            <strong id="heroPrice">2900 <small>دج</small></strong>
+            <s id="heroOldPrice">4200 دج</s>
+          </div>
+
+          <div class="float-card float-card--ship">
+            <span class="float-card__icon">⚡</span>
+            <div>
+              <strong data-i18n="hero.delivery">توصيل سريع</strong>
+              <small data-i18n="hero.deliverySub">24 – 72 ساعة</small>
+            </div>
+          </div>
+
+          <div class="hero__seal">
+            <span>100%</span>
+            <small data-i18n="hero.seal">أصلي</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span data-i18n="ticker.1">دفع عند الاستلام</span><i>✦</i>
+        <span data-i18n="ticker.2">توصيل 69 ولاية</span><i>✦</i>
+        <span data-i18n="ticker.3">منتجات أصلية</span><i>✦</i>
+        <span data-i18n="ticker.4">منتجات أصلية</span><i>✦</i>
+        <span data-i18n="ticker.1">دفع عند الاستلام</span><i>✦</i>
+        <span data-i18n="ticker.2">توصيل 69 ولاية</span><i>✦</i>
+        <span data-i18n="ticker.3">منتجات أصلية</span><i>✦</i>
+        <span data-i18n="ticker.4">منتجات أصلية</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- products -->
+    <section class="section" id="products">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <span class="kicker" data-i18n="products.kicker">المجموعة</span>
+          <h2 data-i18n="products.title">اختر منتجك</h2>
+          <p data-i18n="products.desc">عطور ومستحضرات تجميل مختارة، بأسعار واضحة وتوصيل لكل الولايات.</p>
+        </div>
+        <div class="products" id="productsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- why -->
+    <section class="section section--dark" id="why">
+      <div class="wrap">
+        <div class="section__head section__head--light" data-reveal>
+          <span class="kicker" data-i18n="why.kicker">لماذا Castellum</span>
+          <h2 data-i18n="why.title">تفاصيل صغيرة، فرق كبير</h2>
+        </div>
+        <div class="features" id="featuresGrid"></div>
+      </div>
+    </section>
+
+    <!-- order -->
+    <section class="section order" id="order">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <span class="kicker" data-i18n="order.kicker">الطلب</span>
+          <h2 data-i18n="order.title">أكمل طلبك في دقيقة</h2>
+          <p data-i18n="order.desc">عبّي المعلومات، نتصلو بيك للتأكيد، وتخلص كي توصلك السلعة.</p>
+        </div>
+
+        <div class="order__grid">
+          <!-- summary -->
+          <aside class="summary" data-reveal>
+            <div class="summary__head">
+              <h3 data-i18n="summary.title">ملخص الطلب</h3>
+              <span class="pill" id="summaryBadge">الأكثر مبيعاً</span>
+            </div>
+
+            <div class="summary__product">
+              <div class="summary__img"><img id="summaryImage" src="img/demo-perfume.svg" alt="" /></div>
+              <div class="summary__info">
+                <strong id="summaryName">عطر Noir Oud — 100 مل</strong>
+                <small id="summaryDesc">عطر شرقي فاخر · 100 مل</small>
+                <span class="summary__price" id="summaryPrice">6900 دج</span>
+              </div>
+            </div>
+
+            <div class="qty">
+              <span data-i18n="summary.qty">الكمية</span>
+              <div class="qty__control">
+                <button type="button" id="qtyPlus" aria-label="+">+</button>
+                <input id="qtyInput" type="number" min="1" max="20" value="1" inputmode="numeric" aria-label="Quantity" />
+                <button type="button" id="qtyMinus" aria-label="−">−</button>
+              </div>
+            </div>
+
+            <dl class="summary__rows">
+              <div><dt data-i18n="summary.subtotal">المجموع الجزئي</dt><dd id="lineSubtotal">2900 دج</dd></div>
+              <div id="deliveryRow"><dt><span id="deliveryLabel" data-i18n="summary.delivery">التوصيل</span> <small id="lineWilaya"></small></dt><dd id="lineShipping">—</dd></div>
+              <div class="summary__total"><dt data-i18n="summary.total">الإجمالي</dt><dd id="lineTotal">—</dd></div>
+            </dl>
+
+            <p class="cod" id="codNote">ما تخلصش حتى توصلك السلعة في يدك</p>
+
+            <ul class="summary__trust">
+              <li>✔ <span data-i18n="summary.trust1">تأكيد هاتفي قبل الإرسال</span></li>
+              <li>✔ <span data-i18n="summary.trust2">استبدال خلال 48 ساعة</span></li>
+              <li>✔ <span data-i18n="summary.trust3">معلوماتك محفوظة</span></li>
+            </ul>
+          </aside>
+
+          <!-- form -->
+          <div class="formcard" data-reveal data-delay="1">
+            <form id="orderForm" novalidate autocomplete="on">
+              <div class="field-grid">
+                <div class="field">
+                  <label for="fName" data-i18n="form.name">الاسم الكامل</label>
+                  <div class="field__control">
+                    <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-4 0-7 2-7 4.5V21h14v-2.5C19 16 16 14 12 14z"/></svg>
+                    <input id="fName" name="name" type="text" data-i18n-ph="form.namePh" placeholder="مثال: أمينة بن علي" autocomplete="name" required minlength="3" maxlength="80" />
+                  </div>
+                  <small class="field__error" data-error-for="name"></small>
+                </div>
+
+                <div class="field">
+                  <label for="fPhone" data-i18n="form.phone">رقم الهاتف</label>
+                  <div class="field__control" dir="ltr">
+                    <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
+                    <input id="fPhone" name="phone" type="tel" inputmode="tel" data-i18n-ph="form.phonePh" placeholder="05 55 12 34 56" autocomplete="tel" required pattern="0[5-7][0-9]{8}" />
+                  </div>
+                  <small class="field__error" data-error-for="phone"></small>
+                </div>
+
+                <div class="field">
+                  <label for="fWilaya" data-i18n="form.wilaya">الولاية</label>
+                  <div class="field__control">
+                    <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12zm0-9a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                    <select id="fWilaya" name="wilaya" required>
+                      <option value="" data-i18n="form.wilayaPh">اختر الولاية</option>
+                    </select>
+                  </div>
+                  <small class="field__error" data-error-for="wilaya"></small>
+                </div>
+
+                <div class="field">
+                  <label for="fCommune" data-i18n="form.commune">البلدية</label>
+                  <div class="field__control">
+                    <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+                    <select id="fCommune" name="commune" required disabled>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                  <small class="field__error" data-error-for="commune"></small>
+                </div>
+              </div>
+
+              <div class="field field--full">
+                <label for="fAddress" id="addressLabel" data-i18n="form.address">العنوان الكامل</label>
+                <div class="field__control">
+                  <svg class="field__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V21H3z"/></svg>
+                  <input id="fAddress" name="address" type="text" data-i18n-ph="form.addressPh" placeholder="الحي، الشارع، رقم العمارة…" maxlength="200" required />
+                </div>
+                <small class="field__error" data-error-for="address"></small>
+              </div>
+
+              <div class="field field--full">
+                <label for="fNotes" data-i18n="form.notes">ملاحظات (اختياري)</label>
+                <div class="field__control field__control--area">
+                  <textarea id="fNotes" name="notes" rows="2" maxlength="400" data-i18n-ph="form.notesPh" placeholder="وقت مناسب للتوصيل أو ملاحظة على المنتج…"></textarea>
+                </div>
+              </div>
+
+              <div class="formcard__submit">
+                <button type="submit" class="btn btn--primary btn--block btn--lg" id="submitBtn">
+                  <span class="btn__label" data-i18n="form.submit">اشتري الآن</span>
+                  <span class="btn__price" id="btnPrice">2900 دج</span>
+                </button>
+                <p class="formcard__hint">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l7 3v6c0 5-3 9-7 11-4-2-7-6-7-11V5z"/></svg>
+                  <span data-i18n="form.hint">ما تدفعش قبل ما نتأكدو الطلب معاك</span>
+                </p>
+                <div class="form__alert" id="formAlert" role="alert" hidden></div>
+              </div>
+            </form>
+
+            <div class="success" id="orderSuccess" hidden>
+              <div class="success__icon">✓</div>
+              <h3 data-i18n="success.title">تم استلام طلبك!</h3>
+              <p><span data-i18n="success.ref">رقم الطلب:</span> <strong id="successRef">—</strong></p>
+              <p class="success__sub" data-i18n="success.sub">فريقنا يتصل بيك للتأكيد، والتوصيل من 24 إلى 72 ساعة. الدفع عند الاستلام.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- reviews -->
+    <section class="section" id="reviews">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <span class="kicker" data-i18n="reviews.kicker">آراء الزبائن</span>
+          <h2 data-i18n="reviews.title">كلامهم أحسن من كلامنا</h2>
+        </div>
+        <div class="reviews" id="reviewsGrid"></div>
+      </div>
+    </section>
+
+    <!-- faq -->
+    <section class="section section--cream" id="faq">
+      <div class="wrap faq">
+        <div class="faq__intro" data-reveal>
+          <span class="kicker" data-i18n="faq.kicker">الأسئلة الشائعة</span>
+          <h2 data-i18n="faq.title">كل ما تحتاج معرفته</h2>
+          <p data-i18n="faq.desc">كل ما تحتاج معرفته قبل الطلب.</p>
+          <a class="btn btn--primary" href="#order" data-i18n="faq.cta">اطلب الآن</a>
+        </div>
+        <div class="faq__list" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- final cta -->
+    <section class="cta">
+      <div class="wrap cta__inner" data-reveal>
+        <h2 data-i18n="cta.title">جاهز؟ عطرك الجاي في الطريق</h2>
+        <p data-i18n="cta.desc">طلبك في دقيقة، والدفع عند الاستلام.</p>
+        <a href="#order" class="btn btn--light btn--lg" data-i18n="cta.btn">اطلب الآن — الدفع عند الاستلام</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="brand brand--light">
+          <img class="brand__mark" src="img/logo-mark.svg" alt="" width="42" height="48" />
+          <span class="brand__text"><strong>CASTELLUM</strong><small>SHOP · COSMETICS</small></span>
+        </a>
+        <p id="footerTagline">عطور ومستحضرات تجميل أصلية.</p>
+        
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.store">الموقع</h4>
+        <a href="#products" data-i18n="footer.products">المنتجات</a>
+        <a href="#why" data-i18n="footer.why">لماذا نحن</a>
+        <a href="#reviews" data-i18n="footer.reviews">آراء الزبائن</a>
+        <a href="#faq" data-i18n="footer.faq">الأسئلة</a>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.address">العنوان</h4>
+        <p id="footerAddress">الشلف، الجزائر</p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.payment">الدفع والتسليم</h4>
+        <p data-i18n="footer.pay1">الدفع عند الاستلام</p>
+        <p data-i18n="footer.pay2">توصيل 69 ولاية</p>
+        <p data-i18n="footer.pay3">استبدال خلال 48 ساعة</p>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <span>© <span id="year">2026</span> Castellum Shop — <span data-i18n="footer.rights">كل الحقوق محفوظة.</span></span>
+      <a href="#faq" data-i18n="footer.faq">الأسئلة</a>
+    </div>
+  </footer>
+
+  <!-- sticky mobile bar -->
+  <div class="stickybar" id="stickyBar">
+    <div class="stickybar__price">
+      <small data-i18n="sticky.total">الإجمالي</small>
+      <strong id="stickyPrice">2900 دج</strong>
+    </div>
+    <a href="#order" class="btn btn--primary" data-i18n="sticky.order">اطلب الآن</a>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="static-store.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/landing.js"></script>
+</body>
+</html>
