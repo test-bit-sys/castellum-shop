@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101613" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>لوحة التحكم — Castellum Shop</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <!-- ================= login ================= -->
+  <div class="login" id="loginView">
+    <div class="login__art">
+      <div class="login__art-inner">
+        <img class="login__logo" src="/img/logo-mark.svg" alt="Castellum Shop" />
+        <h1>Castellum <em>Shop</em></h1>
+        <p>لوحة تحكم المتجر — منتجات، طلبات، وتوصيل في مكان واحد.</p>
+        <ul>
+          <li>✦ إدارة المنتجات والصور</li>
+          <li>✦ متابعة الطلبات وتأكيدها</li>
+          <li>✦ أسعار التوصيل لكل ولاية</li>
+        </ul>
+      </div>
+      <div class="login__glow"></div>
+    </div>
+
+    <div class="login__panel">
+        <form class="login__form" id="loginForm" autocomplete="on">
+        <span class="login__eyebrow">تسجيل الدخول</span>
+        <h2>مرحباً بعودتك</h2>
+        <p class="login__hint">دخول آمن للمشرف فقط.</p>
+        <p class="login__foot" style="margin:0 0 14px;color:#97a09b;font-size:12px">الحساب: safouanebaadoud@gmail.com</p>
+
+        <input type="text" name="username" autocomplete="username" value="admin" hidden />
+
+        <label class="lfield">
+          <span>كلمة السر</span>
+          <div class="lfield__box">
+            <input type="password" id="loginPassword" name="password" placeholder="••••••••" required autocomplete="current-password" />
+            <button type="button" class="lfield__eye" id="togglePass" aria-label="إظهار كلمة السر">👁</button>
+          </div>
+        </label>
+
+        <button class="btn btn--primary btn--block" type="submit" id="loginBtn">دخول</button>
+        <p class="login__error" id="loginError" hidden></p>
+        <p class="login__foot">نسيت كلمة السر؟ تواصل مع مسؤول النظام.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= app ================= -->
+  <div class="app" id="appView" hidden>
+    <div class="side-backdrop" id="sideBackdrop" hidden></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__brand">
+        <img class="sidebar__mark" src="/img/logo-mark.svg" alt="" />
+        <div><strong>CASTELLUM</strong><small>SHOP · admin</small></div>
+      </div>
+
+      <nav class="sidebar__nav">
+        <button class="snav is-active" data-view="dashboard">
+          <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3zm10 8h8V11h-8zM3 21h8v-6H3zm10-18v6h8V3z"/></svg>
+          <span>نظرة عامة</span>
+        </button>
+        <button class="snav" data-view="products">
+          <svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4 8 4zm0 2.5l-8 4-8-4V18l8 4 8-4z"/></svg>
+          <span>المنتجات</span>
+          <b class="snav__count" id="navProducts">0</b>
+        </button>
+        <button class="snav" data-view="orders">
+          <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zM14 2v5h5M9 12h8M9 16h8M9 8h2"/></svg>
+          <span>الطلبات</span>
+          <b class="snav__count snav__count--alert" id="navOrders">0</b>
+        </button>
+        <button class="snav" data-view="settings">
+          <svg viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7zM19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.56V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1.1-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.56-1.1 1.7 1.7 0 0 0-.34-1.88l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.56V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9v.09a1.7 1.7 0 0 0 1.56 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1z"/></svg>
+          <span>الإعدادات</span>
+        </button>
+      </nav>
+
+      <div class="sidebar__foot">
+        <a href="../index.html" target="_blank" rel="noopener" class="sidebar__site">
+          <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.4l-8.3 8.3-1.4-1.4L17.6 5H14zM5 5h5v2H7v10h10v-3h2v5H5z"/></svg>
+          عرض الموقع
+        </a>
+        <button class="sidebar__logout" id="logoutBtn">تسجيل الخروج</button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="topbar__burger" id="sideToggle" aria-label="القائمة">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="topbar__title">
+          <h1 id="viewTitle">نظرة عامة</h1>
+          <p id="viewSub">ملخص أداء المتجر</p>
+        </div>
+        <div class="topbar__actions">
+          <a class="btn btn--ghost btn--sm" href="../index.html" target="_blank" rel="noopener">الموقع ↗</a>
+          <div class="avatar" title="المشرف">A</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <!-- dashboard -->
+        <section class="view" id="view-dashboard">
+          <div class="stats">
+            <article class="stat stat--ink">
+              <div class="stat__top"><span>إجمالي الطلبات</span><span class="stat__icon">📦</span></div>
+              <strong id="stOrders">0</strong>
+              <small><b id="stToday">0</b> اليوم</small>
+            </article>
+            <article class="stat">
+              <div class="stat__top"><span>طلبات جديدة</span><span class="stat__icon">🔔</span></div>
+              <strong id="stNew">0</strong>
+              <small>بحاجة للمعالجة</small>
+            </article>
+            <article class="stat">
+              <div class="stat__top"><span>المبيعات المؤكدة</span><span class="stat__icon">💰</span></div>
+              <strong id="stRevenue">0</strong>
+              <small>دج — الطلبات المسلّمة</small>
+            </article>
+            <article class="stat">
+              <div class="stat__top"><span>المنتجات</span><span class="stat__icon">🏷️</span></div>
+              <strong id="stProducts">0</strong>
+              <small><b id="stActive">0</b> نشط · <b id="stLow">0</b> مخزون منخفض</small>
+            </article>
+          </div>
+
+          <div class="panel-grid">
+            <section class="panel">
+              <div class="panel__head">
+                <h2>آخر الطلبات</h2>
+                <button class="link" data-goto="orders">الكل ←</button>
+              </div>
+              <div class="table-wrap">
+                <table class="table">
+                  <thead>
+                    <tr><th>المرجع</th><th>الزبون</th><th>الولاية</th><th>الإجمالي</th><th>الحالة</th></tr>
+                  </thead>
+                  <tbody id="recentOrders"><tr><td colspan="5" class="empty">لا توجد طلبات بعد.</td></tr></tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel__head">
+                <h2>حالات الطلبات</h2>
+              </div>
+              <div class="statuslist" id="statusList"></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- products -->
+        <section class="view" id="view-products" hidden>
+          <div class="toolbar">
+            <div class="toolbar__search">
+              <svg viewBox="0 0 24 24"><path d="M10 18a8 8 0 1 1 5.3-2l4.4 4.4-1.4 1.4-4.4-4.4A8 8 0 0 1 10 18zm0-2a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg>
+              <input type="search" id="productSearch" placeholder="بحث في المنتجات…" />
+            </div>
+            <button class="btn btn--primary btn--sm" id="newProductBtn">＋ منتج جديد</button>
+          </div>
+
+          <div class="cards" id="productsGrid"></div>
+          <div class="empty-state" id="productsEmpty" hidden>
+            <div>🏷️</div>
+            <h3>ما كاينش منتجات</h3>
+            <p>أضف أول منتج باش يبان في الموقع.</p>
+            <button class="btn btn--primary btn--sm" data-new>＋ منتج جديد</button>
+          </div>
+        </section>
+
+        <!-- orders -->
+        <section class="view" id="view-orders" hidden>
+          <div class="toolbar toolbar--wrap">
+            <div class="toolbar__search">
+              <svg viewBox="0 0 24 24"><path d="M10 18a8 8 0 1 1 5.3-2l4.4 4.4-1.4 1.4-4.4-4.4A8 8 0 0 1 10 18zm0-2a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg>
+              <input type="search" id="orderSearch" placeholder="بحث بالمرجع، الاسم، الهاتف…" />
+            </div>
+            <div class="chips" id="statusChips">
+              <button class="chip is-active" data-status="all">الكل</button>
+              <button class="chip" data-status="new">جديد</button>
+              <button class="chip" data-status="confirmed">مؤكد</button>
+              <button class="chip" data-status="shipped">مُرسل</button>
+              <button class="chip" data-status="delivered">مُسلّم</button>
+              <button class="chip" data-status="cancelled">ملغى</button>
+            </div>
+            <a class="btn btn--ghost btn--sm" id="exportCsv" href="/api/admin/orders.csv">⬇ تصدير CSV</a>
+          </div>
+
+          <section class="panel">
+            <div class="table-wrap">
+              <table class="table table--orders">
+                <thead>
+                  <tr>
+                    <th>المرجع</th><th>الزبون</th><th>الهاتف</th><th>الولاية / البلدية</th>
+                    <th>المنتج</th><th>الكمية</th><th>الإجمالي</th><th>الحالة</th><th></th>
+                  </tr>
+                </thead>
+                <tbody id="ordersBody"></tbody>
+              </table>
+            </div>
+            <div class="pager" id="ordersPager"></div>
+          </section>
+        </section>
+
+        <!-- settings -->
+        <section class="view" id="view-settings" hidden>
+          <div class="langbar">
+            <span>لغة المحتوى:</span>
+            <div class="langpick">
+              <button type="button" data-content-lang="ar" class="is-on">العربية</button>
+              <button type="button" data-content-lang="fr">Français</button>
+              <button type="button" data-content-lang="en">English</button>
+            </div>
+            <small id="contentLangHint">تعدّل الآن النصوص العربية (النسخة الأساسية).</small>
+          </div>
+
+          <div class="tabs" id="settingsTabs">
+            <button class="tab is-active" data-tab="store">المتجر</button>
+            <button class="tab" data-tab="delivery">التوصيل</button>
+            <button class="tab" data-tab="content">المحتوى</button>
+            <button class="tab" data-tab="security">الأمان</button>
+          </div>
+
+          <form id="settingsForm">
+            <div class="tabpanel" data-panel="store">
+              <section class="panel">
+                <div class="panel__head"><h2>معلومات المتجر</h2></div>
+                <div class="form-grid">
+                  <label class="f"><span>اسم المتجر</span><input name="storeName" /></label>
+                  <label class="f"><span>الشعار / الوصف القصير</span><input name="tagline" dir="auto" /></label>
+                  <label class="f"><span>العنوان</span><input name="address" /></label>
+                  <label class="f f--full"><span>شريط الإعلان</span><input name="announcement" dir="auto" /></label>
+                  <label class="f"><span>توصيل مجاني فوق (دج)</span><input name="freeShippingThreshold" type="number" min="0" step="100" /></label>
+                  <label class="f"><span>ملاحظة الدفع والتسليم</span><input name="codNote" dir="auto" /></label>
+                </div>
+              </section>
+
+              <section class="panel">
+                <div class="panel__head"><h2>الهيرو (أعلى الصفحة)</h2></div>
+                <div class="form-grid">
+                  <label class="f"><span>سطر فوق العنوان</span><input name="heroEyebrow" dir="auto" /></label>
+                  <label class="f"><span>العنوان الرئيسي</span><input name="heroTitle" dir="auto" /></label>
+                  <label class="f f--full"><span>الوصف</span><textarea name="heroSubtitle" rows="3" dir="auto"></textarea></label>
+                </div>
+                <div class="heroimg">
+                  <div class="heroimg__preview" id="heroPreview"><span>صورة الهيرو</span></div>
+                  <div class="heroimg__actions">
+                    <input type="file" id="heroFile" accept="image/*" hidden />
+                    <button type="button" class="btn btn--ghost btn--sm" id="heroPick">تغيير الصورة</button>
+                    <button type="button" class="btn btn--ghost btn--sm" id="heroClear">استعمال صورة المنتج</button>
+                    <small>PNG / JPG / WEBP — حد 6MB</small>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="tabpanel" data-panel="delivery" hidden>
+              <section class="panel">
+                <div class="panel__head">
+                  <h2>أسعار التوصيل (69 ولاية)</h2>
+                  <div class="panel__tools">
+                    <input type="number" id="bulkPrice" placeholder="سعر" min="0" step="50" />
+                    <button type="button" class="btn btn--ghost btn--sm" id="bulkApply">تطبيق على الكل</button>
+                  </div>
+                </div>
+                <div class="delivery-grid" id="deliveryGrid"></div>
+              </section>
+            </div>
+
+            <div class="tabpanel" data-panel="content" hidden>
+              <section class="panel">
+                <div class="panel__head"><h2>الميزات (4)</h2><button type="button" class="btn btn--ghost btn--sm" data-add="feature">＋</button></div>
+                <div class="repeat" id="featuresEditor"></div>
+              </section>
+              <section class="panel">
+                <div class="panel__head"><h2>آراء الزبائن</h2><button type="button" class="btn btn--ghost btn--sm" data-add="review">＋</button></div>
+                <div class="repeat" id="reviewsEditor"></div>
+              </section>
+              <section class="panel">
+                <div class="panel__head"><h2>الأسئلة الشائعة</h2><button type="button" class="btn btn--ghost btn--sm" data-add="faq">＋</button></div>
+                <div class="repeat" id="faqEditor"></div>
+              </section>
+            </div>
+
+            <div class="tabpanel" data-panel="security" hidden>
+              <section class="panel panel--narrow">
+                <div class="panel__head"><h2>تغيير كلمة السر</h2></div>
+                <div class="form-grid">
+                  <label class="f f--full"><span>كلمة السر الحالية</span><input type="password" name="current" autocomplete="current-password" /></label>
+                  <label class="f f--full"><span>كلمة السر الجديدة (8+ أحرف)</span><input type="password" name="next" autocomplete="new-password" /></label>
+                  <label class="f f--full"><span>تأكيد كلمة السر</span><input type="password" name="confirm" autocomplete="new-password" /></label>
+                </div>
+                <button type="button" class="btn btn--primary" id="changePassBtn">تحديث كلمة السر</button>
+              </section>
+            </div>
+
+            <div class="savebar" id="savebar">
+              <span>عندك تغييرات غير محفوظة</span>
+              <div>
+                <button type="button" class="btn btn--ghost btn--sm" id="resetSettings">إلغاء</button>
+                <button type="submit" class="btn btn--primary btn--sm" id="saveSettings">حفظ التغييرات</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- product modal -->
+  <div class="modal" id="productModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+      <header class="modal__head">
+        <h2 id="pmTitle">منتج جديد</h2>
+        <button type="button" class="modal__close" data-close aria-label="إغلاق">✕</button>
+      </header>
+
+      <form id="productForm" class="modal__body">
+        <input type="hidden" name="id" />
+        <div class="form-grid">
+          <label class="f f--full"><span>اسم المنتج *</span><input name="name" required maxlength="90" /></label>
+          <label class="f f--full"><span>الوصف</span><textarea name="description" rows="3" maxlength="600"></textarea></label>
+          <label class="f"><span>نوع المنتج</span>
+            <select name="type">
+              <option value="digital">رقمي — تسليم فوري</option>
+              <option value="physical">مادي — توصيل</option>
+            </select>
+          </label>
+          <label class="f"><span>السعر (دج) *</span><input name="price" type="number" min="0" step="50" required /></label>
+          <label class="f"><span>السعر القديم</span><input name="oldPrice" type="number" min="0" step="50" /></label>
+          <label class="f"><span>المخزون</span><input name="stock" type="number" min="0" step="1" value="50" /></label>
+          <label class="f"><span>الشارة (اختياري)</span><input name="badge" maxlength="40" placeholder="الأكثر مبيعاً" /></label>
+          <label class="f"><span>الترتيب</span><input name="sort" type="number" min="1" step="1" value="1" /></label>
+          <div class="f f--check">
+            <label class="switch"><input type="checkbox" name="active" checked /><i></i><span>ظاهر في الموقع</span></label>
+            <label class="switch"><input type="checkbox" name="featured" /><i></i><span>منتج مميز (الهيرو)</span></label>
+          </div>
+        </div>
+
+        <details class="transbox">
+          <summary>الترجمة — Français / English</summary>
+          <div class="form-grid">
+            <label class="f f--full"><span>Nom du produit (FR)</span><input data-tr="fr.name" dir="auto" maxlength="120" /></label>
+            <label class="f f--full"><span>Description (FR)</span><textarea data-tr="fr.description" dir="auto" rows="2" maxlength="800"></textarea></label>
+            <label class="f"><span>Badge (FR)</span><input data-tr="fr.badge" dir="auto" maxlength="40" /></label>
+            <label class="f f--full"><span>Product name (EN)</span><input data-tr="en.name" dir="auto" maxlength="120" /></label>
+            <label class="f f--full"><span>Description (EN)</span><textarea data-tr="en.description" dir="auto" rows="2" maxlength="800"></textarea></label>
+            <label class="f"><span>Badge (EN)</span><input data-tr="en.badge" dir="auto" maxlength="40" /></label>
+          </div>
+        </details>
+
+        <div class="upload">
+          <div class="upload__head">
+            <h3>صور المنتج</h3>
+            <small>أول صورة هي الرئيسية — حتى 8 صور، 6MB لكل صورة</small>
+          </div>
+          <div class="upload__drop" id="dropZone">
+            <input type="file" id="productFiles" accept="image/*" multiple hidden />
+            <div class="upload__hint">
+              <span>🖼️</span>
+              <strong>اسحب الصور هنا أو اضغط للاختيار</strong>
+              <small>JPG, PNG, WEBP, GIF</small>
+            </div>
+          </div>
+          <div class="upload__grid" id="imageGrid"></div>
+        </div>
+
+        <footer class="modal__foot">
+          <button type="button" class="btn btn--ghost" data-close>إلغاء</button>
+          <button type="submit" class="btn btn--primary" id="saveProductBtn">حفظ المنتج</button>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+  <!-- order drawer -->
+  <div class="drawer" id="orderDrawer" hidden>
+    <div class="drawer__backdrop" data-close-drawer></div>
+    <aside class="drawer__box" role="dialog" aria-modal="true">
+      <header class="drawer__head">
+        <div>
+          <span class="drawer__ref" id="drawerRef">—</span>
+          <h2>تفاصيل الطلب</h2>
+        </div>
+        <button type="button" class="modal__close" data-close-drawer aria-label="إغلاق">✕</button>
+      </header>
+      <div class="drawer__body" id="drawerBody"></div>
+    </aside>
+  </div>
+
+  <!-- confirm -->
+  <div class="modal modal--confirm" id="confirmModal" hidden>
+    <div class="modal__backdrop" data-close-confirm></div>
+    <div class="modal__box modal__box--sm" role="dialog" aria-modal="true">
+      <div class="modal__body">
+        <div class="confirm__icon">!</div>
+        <h3 id="confirmTitle">تأكيد</h3>
+        <p id="confirmText">متأكد؟</p>
+        <div class="modal__foot">
+          <button type="button" class="btn btn--ghost" data-close-confirm>إلغاء</button>
+          <button type="button" class="btn btn--danger" id="confirmOk">حذف</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/supabase-adapter.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /uploads/
+Disallow: /panel-7f3c/
